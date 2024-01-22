@@ -1,6 +1,7 @@
 package com.api.restapi;
 
 import com.api.restapi.model.DataViaCep;
+import com.api.restapi.model.Neighborhood;
 import com.api.restapi.services.ConsumptionApi;
 import com.api.restapi.services.ConvertData;
 import org.springframework.boot.CommandLineRunner;
@@ -22,6 +23,8 @@ public class RestapiApplication implements CommandLineRunner {
 		ConvertData converter = new ConvertData();
 		DataViaCep data = converter.getData(json, DataViaCep.class);
 		System.out.println(data);
+		Neighborhood dataNeighborhood = converter.getData(json, Neighborhood.class);
+		System.out.println(dataNeighborhood);
 	}
 
 }
